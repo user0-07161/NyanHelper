@@ -14,7 +14,7 @@ async def animal(interaction, animal: Literal["Dog", "Cat", "Fox"]):
     if animal == "Fox":
         content = requests.get("https://randomfox.ca/floof").json()['image']
     if animal == "Cat":
-        content = f"https://cataas.com/cat/{requests.get("https://cataas.com/cat?json=true").json()['_id']}"
+        content = f'https://cataas.com/cat/{requests.get("https://cataas.com/cat?json=true").json()['_id']}'
     if animal == "Dog":
         content = requests.get("https://dog.ceo/api/breeds/image/random").json()['message']
     await interaction.edit_original_response(content=content)
