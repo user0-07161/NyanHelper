@@ -11,7 +11,7 @@ async def askidk(interaction, question: str):
     data = {
         "text": question,
     }
-    response = requests.get(f"{idkai}question")
+    response = requests.get(f"{idkai}{question}")
     if response.status_code == 200:
         embed = discord.Embed(title="Dunno AI's response")
         embed.add_field(name="Prompt", value=question)
