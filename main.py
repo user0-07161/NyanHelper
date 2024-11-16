@@ -20,7 +20,6 @@ nav = {
     "username": os.getenv("UNAME_NAV"),
     "token": os.getenv("TOKEN_NAV"),
 }
-idkai = os.getenv("IDK_AI_API")
 for command in os.listdir(pathlib.PurePath("commands")):
     fullpath = pathlib.PurePath("commands", command)
     if os.path.isfile(fullpath):
