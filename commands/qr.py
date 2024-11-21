@@ -7,6 +7,6 @@ async def qr(interaction, string: str):
     """
     await interaction.response.defer()
     embed = discord.Embed(title="QR code")
-    embed.set_image(url=f"https://api.qrserver.com/v1/create-qr-code/?size=256x256&data={string}")
+    embed.set_image(url=f"""https://api.qrserver.com/v1/create-qr-code/?size=256x256&data={'%20'.join(string.split(' '))}""")
     await interaction.edit_original_response(embed=embed)
 
